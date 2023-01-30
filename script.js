@@ -1,4 +1,4 @@
-function convertToRoman(num) {
+function decimalToRoman(num) {
   	const obj = {
       0:['M',1000], 
       1:['D', 500], 
@@ -11,15 +11,20 @@ function convertToRoman(num) {
 
   //your code here
 
-  let convertToRoman = '';
-  for (let i = 0; i < convertToRoman.length; i++) {
-    while (decimalNum >= convertToRoman[i].decimal) {
-      romanNumeral += convertToRoman[i].roman;
-      decimalNum -= convertToRoman[i].decimal;
+function decimalToRoman(decimalNum) {
+  let romanNumeral = '';
+  for (let i = 0; i < romanNumeralMap.length; i++) {
+    while (decimalNum >= romanNumeralMap[i].decimal) {
+      romanNumeral += romanNumeralMap[i].roman;
+      decimalNum -= romanNumeralMap[i].decimal;
     }
   }
   return romanNumeral;
 }
+
+const decimalNum = prompt();
+const romanNumeral = decimalToRoman(decimalNum);
+console.log(`${romanNumeral}`);  
 
 }
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
@@ -30,4 +35,4 @@ function convertToRoman(num) {
 
 
 // do not edit below this line
-module.exports = convertToRoman
+module.exports = decimalToRoman
