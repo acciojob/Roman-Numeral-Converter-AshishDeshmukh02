@@ -10,28 +10,12 @@ function convertToRoman(num) {
     };
 
   //your code here
-function decimalToRoman(decimalNum) {
-  const romanNumeralMap = [
-    { decimal: 1000, roman: 'M' },
-    { decimal: 900, roman: 'CM' },
-    { decimal: 500, roman: 'D' },
-    { decimal: 400, roman: 'CD' },
-    { decimal: 100, roman: 'C' },
-    { decimal: 90, roman: 'XC' },
-    { decimal: 50, roman: 'L' },
-    { decimal: 40, roman: 'XL' },
-    { decimal: 10, roman: 'X' },
-    { decimal: 9, roman: 'IX' },
-    { decimal: 5, roman: 'V' },
-    { decimal: 4, roman: 'IV' },
-    { decimal: 1, roman: 'I' },
-  ];
 
-  let romanNumeral = '';
-  for (let i = 0; i < romanNumeralMap.length; i++) {
-    while (decimalNum >= romanNumeralMap[i].decimal) {
-      romanNumeral += romanNumeralMap[i].roman;
-      decimalNum -= romanNumeralMap[i].decimal;
+  let convertToRoman = '';
+  for (let i = 0; i < convertToRoman.length; i++) {
+    while (decimalNum >= convertToRoman[i].decimal) {
+      romanNumeral += convertToRoman[i].roman;
+      decimalNum -= convertToRoman[i].decimal;
     }
   }
   return romanNumeral;
